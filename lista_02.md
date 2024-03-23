@@ -251,11 +251,11 @@ ______
 ```
 var idade <- perguntar idade
 
-se idade for menor que 16 então
+se idade for menor que 16 então:
     escreva("Não pode votar")
-senão se idade for maior ou igual a 16 e menor que 18 então
+senão se idade for maior ou igual a 16 e menor que 18 então:
     escreva("Voto facultativo ")
-senão 
+senão:
     escreva("Voto obrigatório")
 
 FIM
