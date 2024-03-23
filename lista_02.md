@@ -42,7 +42,7 @@ Qual das seguintes alternativas melhor descreve o que o código faz?
 
 A) O código avalia a expressão booleana, imprime o resultado `false`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
 
-B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
+**B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console. &larr;**
 
 C) O código avalia a expressão booleana, imprime o resultado `true` e verifica se o número 5 está presente na lista de números.
 
@@ -106,7 +106,7 @@ Escolha a opção que responde corretamente qual seria a saída após a execuç�
 
 A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'
 
-B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'
+**B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'**&larr;
 
 C) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -100.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -1050.'
 
@@ -137,7 +137,7 @@ B) O código verifica se o número é par ou ímpar. Se for par, exibe a mensage
 
 C) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
-D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".
+**D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".** &larr;
 
 
 ______
@@ -201,17 +201,17 @@ Compra 3 aprovada. Saldo restante: 400
 Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
 
 
-D)
+**D) OPÇÃO CORRETA**
 
-Compra 1 aprovada. Saldo restante: 800
+**Compra 1 aprovada. Saldo restante: 800**
 
-Compra 2 aprovada. Saldo restante: 0
+**Compra 2 aprovada. Saldo restante: 0**
 
-Compra 3 aprovada com limite de crédito. Saldo restante: 200
+**Compra 3 aprovada com limite de crédito. Saldo restante: 200**
 
-Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
+**Compra 4 negada. Saldo insuficiente e limite de crédito excedido.**
 
-Compra 5 negada. Saldo insuficiente e limite de crédito excedido.
+**Compra 5 negada. Saldo insuficiente e limite de crédito excedido.**
 
 ______
 
@@ -221,7 +221,7 @@ Escolha a opção que responde corretamente:
 
 A) Setup -> Update -> Draw
 
-B) Preload -> Create -> Update
+**B) Preload -> Create -> Update** &larr;
 
 C) Load -> Initialize -> Render
 
@@ -234,7 +234,7 @@ Escolha a opção que responde corretamente:
 
 A) Renderizar gráficos 3D para jogos em HTML5.
 
-B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.
+**B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.** &larr;
 
 C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
 
@@ -248,8 +248,23 @@ ______
 ![Uma imagem](assets/image.png)
 ______
 
+```
+var idade <- perguntar idade
+
+se idade for menor que 16 então
+    escreva("Não pode votar")
+senão se idade for maior ou igual a 16 e menor que 18 então
+    escreva("Voto facultativo ")
+senão 
+    escreva("Voto obrigatório")
+
+FIM
+```
+______
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
 
+**Resposta:** </br>
+Obs. Quando houver uma variável terminada em "Propria" (como em corPropria, raioProprio etc.), entenda como uma "auto referência", sendo equivalente a um `this.cor` em JavaScript. Também interprete "<-" como um sinal de atribuição, equivalente ao `=` em JavaScript.
 ```
 Classe FormaGeometrica:
     Atributos:
@@ -260,6 +275,34 @@ Classe FormaGeometrica:
 
     Método CalcularArea():
         # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
+
+Classe Retangulo herda de FormaGeometrica:
+    Atributos:
+        - cor
+        - medidaLados13
+        - medidaLados24
+
+    Método Construtor(cor, medidaLados13, medidaLados24):
+        corPropria <- cor 
+        medidaLados13Proprios <- medidaLados13
+        medidaLados24Proprios <- medidaLados24
+
+    Método CalcularArea():
+        area <- medidaLados13 * medidaLados24
+        retorne area
+    
+Classe Circulo herda de FormaGeometrica:
+    Atributos:
+        - cor
+        - raio
+    
+    Método Construtor(cor, raio):
+        corPropria <- cor
+        raioProprio <- raio
+    
+    Método CalcularArea():
+        area <- π * (raioProprio)**2
+        retorne area
 
 ```
 
