@@ -251,12 +251,12 @@ ______
 ```
 var idade <- perguntar idade
 
-se idade for menor que 16 então:
-    escreva("Não pode votar")
-senão se idade for maior ou igual a 16 e menor que 18 então:
-    escreva("Voto facultativo ")
-senão:
-    escreva("Voto obrigatório")
+Se idade for menor que 16 então:
+    Escrever("Não pode votar")
+Senão se idade for maior ou igual a 16 e menor que 18 então:
+    Escrever("Voto facultativo ")
+Senão:
+    Escrever("Voto obrigatório")
 
 FIM
 ```
@@ -264,7 +264,7 @@ ______
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
 
 **Resposta:** </br>
-Obs. Quando houver uma variável terminada em "Propria" (como em corPropria, raioProprio etc.), entenda como uma "auto referência", sendo equivalente a um `this.cor` em JavaScript. Também interprete "<-" como um sinal de atribuição, equivalente ao `=` em JavaScript.
+Obs. Quando houver uma variável terminada em "Propria" (como em corPropria, raioProprio etc.), entenda como uma "auto referência", sendo equivalente a um `this.cor` em JavaScript.
 ```
 Classe FormaGeometrica:
     Atributos:
@@ -289,7 +289,7 @@ Classe Retangulo herda de FormaGeometrica:
 
     Método CalcularArea():
         area <- medidaLados13 * medidaLados24
-        retorne area
+        Retornar area
     
 Classe Circulo herda de FormaGeometrica:
     Atributos:
@@ -302,7 +302,7 @@ Classe Circulo herda de FormaGeometrica:
     
     Método CalcularArea():
         area <- π * (raioProprio)**2
-        retorne area
+        Retornar area
 
 ```
 
@@ -312,7 +312,23 @@ ______
 
 Considere a fórmula de atualização velocidade:
 ```
-    velocidade = velocidadeInicial + aceleracao*tempo
+    Função Simular(velocidadeInicial, aceleração, distância, velocidadeMáxima, tempoMáximo):
+        var tempo <- 0
+        var posiçãoCarro <- 0
+        
+        Enquanto tempo <= tempoMáximo OU posiçãoCarro ≠ distância faça:
+            tempo <- #Tempo transcorrido //atualizar o tempo constantemente
+            posiçãoCarro <- #posição atual do carro // Atualiza a posição do carro constantemente
+
+            Se velocidadeAtual < velocidadeMáxima então:
+                velocidadeAtual <- velocidadeInicial + taxaDeAceleração*tempo
+                // incrementa a velocidade do carro, mas o impede de ultrapassar o limite de velocidade
+
+            Se posiçãoCarro for igual à pistaDeTeste então:
+                Retornar tempo 
+            
+            Se tempo == tempoMáximo:
+                Retornar "tempo máximo atingido" 
 ```
 
 ______
@@ -321,12 +337,12 @@ ______
 
 ```
 Função SomaDeMatrizes(matrizA, matrizB):
-    # Verifica se as duas matrizes têm o mesmo número de linhas e colunas
+    // Verifica se as duas matrizes têm o mesmo número de linhas e colunas
     Se tamanho(matrizA) ≠ tamanho(matrizB) então:
         Retornar "As matrizes não podem ser somadas. Elas têm dimensões diferentes."
     Senão:
         linhas <- tamanho(matrizA)
-        colunas <- tamanho(matrizA[0]) # Considerando que todas as linhas têm o mesmo número de colunas
+        colunas <- tamanho(matrizA[0]) // Considerando que todas as linhas têm o mesmo número de colunas
         matrizResultado <- novaMatriz(linhas, colunas)
 
         # Loop para percorrer cada elemento das matrizes e calcular a soma
@@ -336,11 +352,37 @@ Função SomaDeMatrizes(matrizA, matrizB):
 
         Retornar matrizResultado
 
-# Exemplo de uso da função
+Função ProdutoDeMatrizes(matrizA, matrizB):
+    // Verifica se as duas matrizes podem ser multiplicadas, ou seja, se o número de linhas de uma é igual ao número de colunas da outra
+    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:
+        Retornar "As matrizes não podem ser multiplicadas."
+    Senão:
+        linhasA <- tamanho(matrizA)
+        colunasA <- tamanho(matrizA[0]) // Considerando que todas as linhas têm o mesmo número de colunas
+
+        linhasB <- tamanho(matrizB)
+        colunasB <- tamanho(matrizB[0]) // Considerando que todas as linhas têm o mesmo número de colunas
+        matrizResultado <- novaMatriz(linhasA, colunasB)
+
+
+        Para i de 0 até linhasA-1 faça:
+            Para j de 0 até colunasA-1 faça:
+                Para k de 0 até colunasB-1 faça:
+                    matrizResultado[i][j] <- matrizResultado[i][j] + matrizA[i][k] * matrizB[k][j]
+        
+        Retornar matrizResultado
+
+
 matrizA <- [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
-
+        
+// Exemplo de uso da função soma
 matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
+
+// Exemplo de uso da função produto
+matrizProduto <- ProdutoDeMatrizes(matrizA, matrizB)
+Escrever("Produto de matrizes:")
+ImprimirMatriz(matrizProduto)
 ```
